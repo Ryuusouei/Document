@@ -1,0 +1,40 @@
+%===================================================
+%(Beamer Page = Length x Width : 12.8cm x 9.6cm)
+%Slides of Introduction and installation of XeLaTeX
+%Author:Tsung-Ying Liu
+%Date:August 14, 2013
+%===================================================
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=brown]{structure}
+\usepackage{metalogo}	%\XeTeX, \XeLaTeX, \LuaTeX and \LuaLaTeX can be obtained 
+\usepackage{graphicx}	%加入圖片縮放'設定圖片長寬的套件
+\usepackage{pgf}		%加入控置圖片位置的套件,語法\pgfputat{\pgfxy(3,4)}{}
+\usepackage{url}		%用來加入網頁URL的套件
+\usepackage{xeCJK} 
+\usepackage{fontspec} %加這個就可以設定字體
+\usepackage{indentfirst}	%加入縮排指令的套件 
+\usepackage{listings}
+\setCJKmainfont{標楷體} 
+\XeTeXlinebreaklocale "zh" 
+\XeTeXlinebreakskip = 0pt plus 1pt
+\usetheme{CambridgeUS}	%使用"CambridgeUS"做為簡報主題
+
+\graphicspath{{figure/}}
+
+\setbeamertemplate{navigation symbols}{}	%將Beamer簡報底部的工具列取消掉
+
+\logo{\hyperlink{title}{\beamerbutton{Titlepage}}}
+
+\title[Introduction and installation of XeLaTeX]
+		{Introduction and installation of XeLaTeX}
+\author[Tsung-Ying Liu]{Tsung-Ying Liu\inst{1} \newline
+		Advisor: Jing-Jou Tang\inst{1}} 
+\institute[STUST]
+		{\inst{1} Southern Taiwan University of Science and Technology} 
+\date{\today} 
+
+\begin{document} 
+
+\input{chapter1}
+
+\end{document} 

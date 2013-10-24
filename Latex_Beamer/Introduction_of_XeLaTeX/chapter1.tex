@@ -1,0 +1,239 @@
+	\begin{frame}[label=title]%---------title page 
+    	\titlepage\end{frame} 
+
+
+	\begin{frame}%---------outline page  
+		\frametitle{Outline}
+		\begin{columns}
+			\begin{column}{6cm}		
+				\begin{itemize}
+					\item \hyperlink{introduction}{What's the XeLaTeX?}
+					\item \hyperlink{install}{Installation}
+					\item \hyperlink{first}{Create my first one tex file.}
+				\end{itemize}
+			\end{column}
+			
+			\begin{column}{6cm}
+				\includegraphics[scale=0.15]{FirstTexFile}
+			\end{column}
+		\end{columns}	
+	\end{frame}
+		
+
+	\begin{frame}[label=introduction]%---------introduction page
+		\frametitle{What's the TeX?}
+		Tex is a typesetting system.
+		\begin{columns}
+			\begin{column}{7cm}		
+				\begin{itemize}
+					\item {Initial release \alert{1978} (35 years ago) }
+					\item {Developer is \alert{Donald Knuth}}
+					\item {Operating system	\alert{Cross-platform}}
+					\item {\alert{Free} software}
+				\end{itemize}
+			\end{column}
+			\begin{column}{4cm}
+				\TeX\newline
+				\LaTeX\newline
+				\LaTeXe\newline
+				\XeTeX\newline
+				\XeLaTeX
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}[label=install]%---------installation page
+		\frametitle{Installation}
+		This document is for Windows System, if you want to install \XeLaTeX, here are the steps I took:\newline		 
+		\begin{enumerate}
+			\item {loaded TeX Live, \newline
+				\alert{Official Website: }\url{http://www.tug.org/texlive/}} 
+			\item {loaded Texmaker, \newline
+				\alert{Official Website: }\url{http://www.xm1math.net/texmaker/}}
+			\item {modify configuration of Texmaker}
+		\end{enumerate}
+	\end{frame}
+
+	\begin{frame}[fragile]%---------create first one tex page
+		\frametitle{To modify configuration of Texmaker}
+		Start Texmaker\newline
+		Manu-Options -> Configure Texmaker
+		\newline
+		\begin{center}
+		\includegraphics[scale=0.3]{ConfigureTexmaker}
+		\end{center}
+		
+	\end{frame}
+	
+	\begin{frame}[label=TexmakerHotKey]%---------introduction page  
+		\frametitle{Hot Keys of Texmaker}
+		\begin{columns}
+			\begin{column}{6cm}		
+				\includegraphics[scale=0.4]{TexmakerHotKey}
+			\end{column}
+			\begin{column}{4cm}
+				\begin{tabular}{cc}
+					Function & Hot Key\\
+					\hline
+					\\
+					LaTeX &  F2 \\
+					\\
+					瀏覽 PDF & F7 \\
+					\\					
+					BibTeX & F11 \\
+				\end{tabular}			
+			\end{column}
+		\end{columns}
+	\end{frame}	
+		
+	\begin{frame}[fragile]%---------create first one tex page
+		\frametitle{Create a tex file(1/2)}
+		\begin{lstlisting}
+			%========================================
+			\documentclass{article}
+			\usepackage{xeCJK}
+
+			\setmainfont{Times New Roman}
+			\setCJKmainfont{標楷體}
+
+			\begin{document}
+			     Hello everybody. お早う皆さん！ 大家好!
+			\end{document}
+			%========================================
+		\end{lstlisting}
+		This txt save as a *.tex file, and then enter F2 -> F7, finally you will get the *.pdf file in the same path.
+	\end{frame}
+
+	\begin{frame}%---------create first one tex page
+		\frametitle{Create my first one tex file(2/2)}
+		
+		\centering
+		\includegraphics[scale=0.3]{HelloEverybody}
+
+	\end{frame}
+
+	\begin{frame}[label=Education]%---------reference page
+		\frametitle{education}
+		\begin{thebibliography}{10}
+			\bibitem{LaTeX/Mathematics}
+			{\em LaTeX/Mathematics}, \url{http:/http://en.wikibooks.org/wiki/LaTeX/Mathematics}, 2013.
+			\bibitem{LaTeX/Tables}
+			{\em LaTeX/Tables}, \url{http://en.wikibooks.org/wiki/LaTeX/Tables}, 2013.
+			\bibitem{LaTeX/Floats, Figures and Captions}
+			{\em LaTeX/Floats, Figures and Captions}, \url{http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}, 2013.
+			\bibitem{Tex}
+			{\em Tex}, \url{http://tex.stackexchange.com/}, 2013.
+		\end{thebibliography}
+	\end{frame}
+
+	\begin{frame}[label=reference]%---------reference page
+		\frametitle{Reference}
+		\begin{thebibliography}{10}
+			\bibitem{TeX Live}
+			{\em TeX Live}, \url{http://www.tug.org/texlive/}, 2013.
+			\bibitem{Texmake}
+			{\em Texmaker}, \url{http://www.xm1math.net/texmaker/}, 2013.
+			\bibitem{用Bemaer做簡報}
+			蔡炎龍, {\em 用Bemaer做簡報}, 2010.
+		\end{thebibliography}
+	\end{frame}
+
+	\begin{frame}{完}
+		\frametitle{Finial page...}
+		\centering
+		\Large{Thank you for your attemation!}
+	\end{frame} 
+
+	\begin{frame}[label=o]%---------Video page
+		\includegraphics[scale=0.1]{FirstTexFile}
+
+		\end{frame}
+		\begin{frame}[label=Video]%---------Video page
+		\frametitle{Video testing}
+		\centering
+		\href{movie/123.mp4}{\includegraphics[scale=0.5]{pcaSpiral}}
+
+	\end{frame}	
+	
+	\begin{frame}[label=Picture]%---------Picture page
+		\frametitle{Picture testing}
+		\centering
+		\pgfputat{\pgfxy(3,-1)}{\includegraphics[scale=0.3]{pcaSpiral}}
+
+	\end{frame}	
+
+
+	\begin{frame}	
+		\unitlength=1mm
+		\begin{picture}(80, 60)
+			\multiput(5, 0)(5, 0){15}{\line(0, 1){60}} % 畫 15 條直線，每隔 5mm 一條
+			\multiput(0, 5)(0, 5){11}{\line(1, 0){80}} % 畫 11 條橫線，每隔 5mm 一條
+			\thicklines
+			\put(0, 0){\vector(0, 1){60}} % 畫 y 軸
+			\put(0, 0){\vector(1, 0){80}} % 畫 x 軸
+			\put(0, 0){\circle*{1}}       % 畫圓點，實心粗點
+			\put(-5, -5){$O(0, 0)$}       % 標上原點的座標
+			\put(-5, 60){$y$}             % 標上 y 軸字樣
+			\put(80, -5){$x$}             % 標上 x 軸字樣
+
+			\put(-7, 20){\rotatebox{90}{這裡是 $y$ $axis$}}
+			\put(30, -6){這裡是 $x$ $axis$}
+
+		\end{picture}
+	\end{frame}
+
+
+	\begin{frame}	
+		This is picture example. See Fig. ~\ref{fig:test} 
+		\begin{figure}[ht]	%[h] figure put on the end of this passage 
+							%[t] figure put on the top of the page
+							%[b] figure put on the bottom of the page 
+			\centering
+			\includegraphics[scale=0.4]{pcaSpiral}
+			\caption{ テスト}
+			\label{fig:test}
+
+		\end{figure}
+	\end{frame}
+
+
+	\begin{frame}
+		\begin{tabbing}
+	
+			xxxxxxxxxx\=xxxxxxxxxx\=xxxxxxxxxx\kill
+			column1	\> column2	\> column3	\\
+			item1	\> item2	\> item3	\\
+			itema	\> itemb	\> itenc
+
+		\end{tabbing}
+
+		\begin{table}[h]
+			\caption{TestTable}
+			\centering
+			\begin{tabular}[t]{lll} %{lll} {ccc} {rrr} = left center right
+				\hline
+					& column2 & column3	\\
+				\cline{2-3}
+				item1	& item2	& item3	\\
+				itemA	& itemB	& itemC	\\
+				\hline
+			\end{tabular}
+		\end{table}
+
+
+		\begin{table}[h]
+    		\centering
+			\begin{tabular}{lcc}
+			\hline
+			義大利 & 0.5  & 16.12 \\\hline
+			英國   & 2    & 12.3 \\\hline
+			加拿大 & 3    & 8.1 \\\hline
+			\end{tabular}
+    		\caption{改變行高並加入底色的表格}\label{basic_2}  %加入標題與標號參照的文字
+		\end{table}
+	
+	\end{frame}
+	
+	\begin{frame}
+		jkjijojojio\footnote{Hello World!}
+	\end{frame}
