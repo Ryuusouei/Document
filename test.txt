@@ -1,0 +1,12 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 10B8-6D2C
+
+ Directory of C:\DOCUME~1\randy\MYDOCU~1\GitHub\Document
+
+2013/10/25  ?? 11:51    <DIR>          .
+2013/10/25  ?? 11:51    <DIR>          ..
+2013/10/25  ?? 10:56    <DIR>          Latex_Beamer
+2013/10/24  ?? 05:55                69 README.md
+2013/10/25  ?? 11:51                 0 test.txt
+               2 File(s)             69 bytes
+               3 Dir(s)  10,579,550,208 bytes free
