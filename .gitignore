@@ -1,0 +1,11 @@
+figure/
+
+#Latex output file
+*.blg
+*.log
+*.aux
+*.lof
+*.nav
+*.snm
+*.toc
+*.vrb
