@@ -1,0 +1,69 @@
+\documentclass[12pt,a4paper,fleqn]{book}	%設定文件內容字體大小:12pt，文件格式:report(另有article(期刊)、book(書)等格式)
+%	fleqn => 使數學式靠左對齊，預設是居中對齊。
+%	A4 paper 為 21cm*29.7cm
+
+
+\usepackage{booktabs}   		%設計表格內容
+
+\usepackage{xeCJK}       		%打中文必備，會自動載入fontspec，並讓讓中英文字體分開設置
+
+\renewcommand{\figurename}{圖}
+\renewcommand{\tablename}{表}
+
+\setCJKmainfont{標楷體}				%設定預設中文字型:標楷體
+%以下為字體切換的設定，設定方法:內容文字前依照格式輸入{\Hei XXXX}，{\MS XXXX}及可變成相對應字體
+\newCJKfontfamily\Hei{微軟正黑體}  	%內容文字前依照此格式輸入{\Hei XXXX}，輸出文字可改成:微軟正黑體		
+\newCJKfontfamily\NewMing{新細明體}	%內容文字前依照此格式輸入{\NewMing XXXX}，輸出文字可改成:新細明體
+\newCJKfontfamily\MS{MS Mincho}		%內容文字前依照此格式輸入{\MS XXXX}，輸出文字可改成:MS PGothic
+
+\setmonofont[Scale=0.8]{Courier New}	% 等寬字型
+
+\XeTeXlinebreaklocale "zh"			%指示Latex以中文的方式斷行
+\XeTeXlinebreakskip = 0pt plus 1pt	%在字元間加入0pt~1pt的彈性間距
+
+\title{CAN controller with transceiver (CS8972)}
+\author{Jing-Jou Tang, \\
+Tsung-Ying Liu, \\
+STUST TJJ Group}
+
+\date{\today} %不要日期
+
+\graphicspath{{figure/}{table/}}	%設定圖片及圖片(表格)的搜索路徑
+
+\begin{document}
+
+
+\maketitle
+
+    \setcounter{page}{2}			%頁碼開始計算的編號
+	\pagenumbering{roman}			%用羅馬rs頁碼
+
+%%% 建立目次、表目錄與圖目 %%%
+    \tableofcontents
+    \addcontentsline{toc}{chapter}{\hspace{-4.5ex}目次}
+    \listoftables
+    \addcontentsline{toc}{chapter}{\hspace{-4.5ex}表目錄}
+    \listoffigures
+    \addcontentsline{toc}{chapter}{\hspace{-4.5ex}圖目錄}
+    \newpage
+
+    \setcounter{page}{2}			%頁碼開始計算的編號
+	\pagenumbering{arabic}			%用一般數字編號
+
+
+  	\include{Book_CS8972_CAN_Introduction}		%載入content
+	\include{Book_CS8972_Introduction}			%載入content
+	\include{Book_CS8972_SPI}					%載入content
+	\include{Book_CS8972_IIC}					%載入content
+	\include{Book_CS8972_Application}			%載入content
+
+
+
+
+	\newpage
+    \addcontentsline{toc}{chapter}{\hspace{-4.5ex}Reference}	%將Reference的頁數也加入到目錄當中
+
+	\bibliographystyle{IEEEtran}								%Reference依照IEEEtran格式
+	\bibliography{test2OPC_bib_20120821}							%載入.bib檔
+
+\end{document}
